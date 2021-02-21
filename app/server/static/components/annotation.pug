@@ -143,13 +143,6 @@ div.columns(v-cloak="")
           span.icon
             i.fas.fa-box
 
-    div.columns
-      div.column
-        block annotation-area
-
-      div.column(v-if="documentMetadata != null && documentMetadata.documentSourceUrl != null")
-        preview(v-bind:url="documentMetadata.documentSourceUrl")
-
     div.level.mt30
       div.level-left
         div.buttons
@@ -189,3 +182,11 @@ div.columns(v-cloak="")
           )
             span.icon.tooltip(data-tooltip="Next page")
               i.fas.fa-arrow-right
+
+    div.columns
+      div.column
+        block annotation-area
+
+      div.column(v-if="documentMetadata != null && documentMetadata.documentSourceUrl != null")
+        preview(v-bind:url="documentMetadata.documentSourceUrl")
+

@@ -4,7 +4,7 @@ set -o errexit
 
 root="$(dirname "$0")/.."
 app="${root}/app"
-venv="${root}/venv"
+venv="${root}/.venv"
 
 if [[ ! -f "${venv}/bin/python" ]]; then
   echo "Creating virtualenv"

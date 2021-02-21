@@ -17,14 +17,12 @@ import dj_database_url
 from environs import Env
 from furl import furl
 
-
 # Build paths inside the project like this: path.join(BASE_DIR, ...)
 BASE_DIR = path.dirname(path.dirname(path.abspath(__file__)))
 
 env = Env()
 env.read_env(path.join(BASE_DIR, '.env'), recurse=False)
-
-
+assert env('ALLOW_SIGNUP', "?") != '?', "env is not loaded!"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
